@@ -1,0 +1,151 @@
+{
+  "openapi": "3.0.2",
+  "info": { "title": "Simple OCR API", "version": "0.1.0" },
+  "paths": {
+    "/extract-text": {
+      "post": {
+        "summary": "Extract Text",
+        "description": "Extracts text from an input document and returns the result.\n\nArgs:\n    payload (ExtractData): Event payload containing a document stream encoded as Base64. Defaults to extract_text_examples.\n\nReturns:\n    response (ExtractDataResp): Response containing the type of content extracted (plain-text, key-value pairs, or tables) and the extracted string.",
+        "operationId": "extract_text_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ExtractData" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ExtractDataResp" }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/extract-key-value-pairs": {
+      "post": {
+        "summary": "Extract Key Value Pairs",
+        "description": "Extracts key-value pairs from an input document and returns the result.\n\nArgs:\n    payload (ExtractData): Event payload containing a document stream encoded as Base64. Defaults to extract_key_value_pairs_examples.\n\nReturns:\n    response (ExtractDataResp): Response containing the type of content extracted (plain-text, key-value pairs, or tables) and the extracted string.",
+        "operationId": "extract_key_value_pairs_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ExtractData" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ExtractDataResp" }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/extract-tables": {
+      "post": {
+        "summary": "Extract Tables",
+        "description": "Extracts tables from an input document and returns the result.\n\nArgs:\n    payload (ExtractData): Event payload containing a document stream encoded as Base64. Defaults to extract_tables_examples.\n\nReturns:\n    response (ExtractDataResp): Response containing the type of content extracted (tables) and the extracted string. ",
+        "operationId": "extract_tables_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ExtractData" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ExtractDataResp" }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ExtractData": {
+        "title": "ExtractData",
+        "required": ["documentStream"],
+        "type": "object",
+        "properties": {
+          "documentStream": { "title": "Documentstream", "type": "string" }
+        }
+      },
+      "ExtractDataResp": {
+        "title": "ExtractDataResp",
+        "required": ["contentType", "extractedData"],
+        "type": "object",
+        "properties": {
+          "contentType": { "title": "Contenttype", "type": "string" },
+          "extractedData": { "title": "Extracteddata", "type": "string" }
+        }
+      },
+      "HTTPValidationError": {
+        "title": "HTTPValidationError",
+        "type": "object",
+        "properties": {
+          "detail": {
+            "title": "Detail",
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ValidationError" }
+          }
+        }
+      },
+      "ValidationError": {
+        "title": "ValidationError",
+        "required": ["loc", "msg", "type"],
+        "type": "object",
+        "properties": {
+          "loc": {
+            "title": "Location",
+            "type": "array",
+            "items": { "anyOf": [{ "type": "string" }, { "type": "integer" }] }
+          },
+          "msg": { "title": "Message", "type": "string" },
+          "type": { "title": "Error Type", "type": "string" }
+        }
+      }
+    }
+  }
+}
