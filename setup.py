@@ -16,6 +16,7 @@ setuptools.setup(
     ],
     classifiers=[
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.7",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT No Attribution License (MIT-0)",
     ],

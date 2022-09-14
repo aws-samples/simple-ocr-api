@@ -21,8 +21,9 @@ setuptools.setup(
         "uvicorn==0.18.1",
     ],  # checks if libs are installed, and installs if not
     classifiers=[
-        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.7",
         "License :: OSI Approved :: MIT No Attribution License (MIT-0)",
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.7",
 )
