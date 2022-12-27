@@ -17,7 +17,7 @@ setuptools.setup(
         "Pillow==9.1.1",
         "pydantic==1.9.1",
         "pytest==7.1.2",
-        "setuptools==56.0.0",
+        "setuptools==65.5.1",
         "uvicorn==0.18.1",
     ],  # checks if libs are installed, and installs if not
     classifiers=[
