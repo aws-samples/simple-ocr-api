@@ -14,7 +14,7 @@ setuptools.setup(
         "botocore==1.27.17",
         "fastapi==0.78.0",
         "mangum==0.15.0",
-        "Pillow==9.1.1",
+        "Pillow==9.3.0",
         "pydantic==1.9.1",
         "pytest==7.1.2",
         "setuptools==56.0.0",
