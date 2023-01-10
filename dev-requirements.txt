@@ -1,4 +1,4 @@
-amazon-textract-prettyprinter==0.0.13
+amazon-textract-prettyprinter==0.1.0
 boto3==1.24.4
 botocore==1.27.17
 fastapi==0.78.0
