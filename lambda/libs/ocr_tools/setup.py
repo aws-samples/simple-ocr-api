@@ -18,7 +18,7 @@ setuptools.setup(
         "pydantic==1.9.1",
         "pytest==7.1.2",
         "setuptools==65.6.3",
-        "uvicorn==0.18.1",
+        "uvicorn==0.20.0",
     ],  # checks if libs are installed, and installs if not
     classifiers=[
         "Programming Language :: Python :: 3.8",
