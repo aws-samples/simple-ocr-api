@@ -10,7 +10,7 @@ setuptools.setup(
     install_requires=[
         f"cdk_lambda_layer_builder @ git+https://github.com/aws-samples/aws-cdk-lambda-layer-builder.git#egg=cdk_lambda_layer_builder",
         "aws-cdk-lib==2.31.1",
-        "constructs==10.1.215",
+        "constructs==10.1.228",
         "boto3==1.24.4",
         "wheel",
     ],
