@@ -15,7 +15,7 @@ setuptools.setup(
         "fastapi==0.78.0",
         "mangum==0.17.0",
         "Pillow==9.3.0",
-        "pydantic==1.10.4",
+        "pydantic==2.3.0",
         "pytest==7.1.2",
         "setuptools==65.6.3",
         "uvicorn==0.20.0",
