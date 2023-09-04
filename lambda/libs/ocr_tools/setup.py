@@ -11,7 +11,7 @@ setuptools.setup(
         "amazon_textract_prettyprinter==0.0.13",
         "amazon-textract-response-parser==0.1.30",
         "boto3==1.24.4",
-        "botocore==1.27.17",
+        "botocore==1.31.40",
         "fastapi==0.78.0",
         "mangum==0.17.0",
         "Pillow==9.3.0",
