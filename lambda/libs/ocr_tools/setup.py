@@ -10,7 +10,7 @@ setuptools.setup(
     install_requires=[
         "amazon_textract_prettyprinter==0.0.13",
         "amazon-textract-response-parser==0.1.30",
-        "boto3==1.24.4",
+        "boto3==1.28.49",
         "botocore==1.27.17",
         "fastapi==0.78.0",
         "mangum==0.17.0",
