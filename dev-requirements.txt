@@ -7,7 +7,7 @@ Pillow==9.4.0
 pydantic==1.9.1
 pytest==7.2.0
 uvicorn==0.18.1
-aws-cdk-lib==2.28.1
+aws-cdk-lib==2.96.2
 constructs>=10.0.0,<11.0.0
 -e lambda/libs/ocr_tools
 cdk_lambda_layer_builder @ git+https://github.com/aws-samples/aws-cdk-lambda-layer-builder.git#egg=cdk_lambda_layer_builder
